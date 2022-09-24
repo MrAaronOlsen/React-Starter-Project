@@ -6,7 +6,7 @@ import styles from './styles.mod.scss'
 export default function App() {
   return (
     <div className={styles.container}>
-      I'm an App
+      <div className={styles.welcome}>Welcome to App</div>
     </div>
   )
 }
