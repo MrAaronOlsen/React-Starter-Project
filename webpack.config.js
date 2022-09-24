@@ -16,6 +16,10 @@ module.exports = () => {
       hot: true,
       open: true,
     },
+    resolve: {
+      extensions: ['.js', '.jsx'],
+      alias: aliases(),
+    },
     module: {
       rules: rules(),
     },
@@ -90,4 +94,13 @@ const plugins = () => {
     }),
     new ReactRefreshWebpackPlugin(),
   ]
+}
+
+// Aliases
+//
+
+const aliases = () => {
+  return {
+    event: path.resolve(__dirname, 'src/event')
+  }
 }
